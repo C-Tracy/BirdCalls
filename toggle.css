@@ -1,3 +1,7 @@
+.reveal h2 {
+  text-transform: none;
+}
+
 #toggler {
   position: absolute;
   z-index: 9999;

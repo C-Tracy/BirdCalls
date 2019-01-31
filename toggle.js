@@ -1,9 +1,5 @@
-var defaultState = true;
-var allTrueText = 'Yes';
-var allFalseText = 'No';
 var slideTrueText = 'Hide Answer';
 var slideFalseText = 'Show Answer';
-var legendText = 'Show Answers';
 
 var targets = document.getElementsByClassName('toggle');
 var buttons = document.getElementsByClassName('slide-toggler');
@@ -85,7 +81,7 @@ function toggleSlide(t){
 }
 
 
-// Shuffle slides 
+// Shuffle slides
 function shuffle(container, elements){
   var start = 1
   for (var i = elements.length - start; i >= start; i--) {

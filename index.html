@@ -1,94 +1,111 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Toggle</title>
+		<link rel="stylesheet" href="revealjs/css/reveal.css">
+		<link rel="stylesheet" href="revealjs/css/theme/black.css">
 
-  <link rel='stylesheet' href='css/reveal.css'>
-  <link rel='stylesheet' href='css/theme/black.css'>
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
 
-  <!-- Theme used for syntax highlighting of code -->
-  <link rel='stylesheet' href='lib/css/zenburn.css'>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
 
-  <link rel='stylesheet' href='toggle.css'>
+    <link rel='stylesheet' href='toggle.css'>
 
-  <!-- Printing and PDF exports -->
-  <script>
-  var link = document.createElement( 'link' );
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
-  link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-  document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-</head>
-<body>
+    <!-- Edit Page Title -->
+    <title>Toggle</title>
+
+	</head>
+	<body>
+    <div class='reveal'>
+
+      <!-- Edit Main Toggler -->
+      <fieldset id='toggler'>
+        <legend>Show Answers</legend>
+          <input class='option-input radio' id='toggle-all-true' checked>
+          <label for='toggle-all-true'>Yes</label>
+          <input class='option-input radio' id='toggle-all-false'>
+          <label for='toggle-all-false'>No</label>
+      </fieldset>
+      <button class='shuffle'>Shuffle</button>
+
+      <div class='slides'>
 
 
-<div class='reveal'>
+<!-- *********************************************************************** -->
+<!-- Slide Templates -->
 
-  <fieldset id='toggler'>
-    <legend>Show Answers</legend>
-      <input class='option-input radio' id='toggle-all-true' checked>
-      <label for='toggle-all-true'>Yes</label>
-      <input class='option-input radio' id='toggle-all-false'>
-      <label for='toggle-all-false'>No</label>
-  </fieldset>
-  <button class='shuffle'>Shuffle</button>
+        <!-- Title Slide -->
+        <section>
+          <h1>Toggle</h1>
+        </section>
 
-  <div class='slides'>
+        <!-- Photo and Audio Template -->
+        <section>
+          <h2 class='toggle'>Photo and Audio</h2>
+          <img class='toggle stretch' src='content/img/northern-cardinal.jpg'>
+          <button class='slide-toggler'></button>
+          <div>
+            <audio data-autoplay loop controls src='content/audio/northern-cardinal.mp3'></audio>
+          </div>
+        </section>
 
-    <section>
-      <h1>Toggle</h1>
-    </section>
+        <!-- Photo Only Template -->
+        <section>
+          <h2 class='toggle'>Photo Only</h2>
+          <img class='stretch' src='content/img/northern-cardinal.jpg'>
+          <button class='slide-toggler'></button>
+        </section>
 
-    <section>
-      <h2 class='toggle'>Photo and Audio</h2>
-      <img class='toggle stretch' src='content/img/blue-jay.jpg'>
-      <button class='slide-toggler'></button>
-      <div>
-        <audio data-autoplay loop controls src='content/mp3/blue-jay.mp3'></audio>
+        <!-- Audio Only Template -->
+        <section>
+          <h2 class='toggle'>Audio Only</h2>
+          <button class='slide-toggler'></button>
+          <div>
+            <audio data-autoplay loop controls src='content/audio/northern-cardinal.mp3'></audio>
+          </div>
+        </section>
+
+        <!-- Text Only Template -->
+        <section>
+          <h2>Visble Text</h2>
+          <h2 class='toggle'>Hidden Text</h2>
+          <button class='slide-toggler'></button>
+        </section>
+
+<!-- End Of Slide Templates -->
+<!-- *********************************************************************** -->
+
+
       </div>
-    </section>
+    </div>
 
-    <section>
-      <h2 class='toggle'>Photo only</h2>
-      <img class='stretch' src='content/img/northern-cardinal.jpg'>
-      <button class='slide-toggler'></button>
-    </section>
+    <script src='toggle.js'></script>
 
-    <section class='content-slide'>
-      <h2 class='toggle'>Audio Only</h2>
-      <button class='slide-toggler'></button>
-      <div>
-        <audio data-autoplay loop controls src='content/mp3/belted-kingfisher.mp3'></audio>
-      </div>
-    </section>
+		<script src="revealjs/lib/js/head.min.js"></script>
+		<script src="revealjs/js/reveal.js"></script>
 
-    <section class='content-slide'>
-      <h2>Visble Text</h2>
-      <h2 class='toggle'>Hidden Text</h2>
-      <button class='slide-toggler'></button>
-    </section>
-
-
-
-  </div>
-</div>
-<script src='toggle.js'></script>
-<script src='lib/js/head.min.js'></script>
-<script src='js/reveal.js'></script>
-<script>
-  Reveal.initialize({
-    dependencies: [
-      { src: 'plugin/markdown/marked.js' },
-      { src: 'plugin/markdown/markdown.js' },
-      { src: 'plugin/notes/notes.js', async: true },
-      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-    ],
-    slideNumber: true,
-  });
-</script>
-</body>
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'revealjs/plugin/markdown/marked.js' },
+					{ src: 'revealjs/plugin/markdown/markdown.js' },
+					{ src: 'revealjs/plugin/notes/notes.js', async: true },
+					{ src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
 </html>

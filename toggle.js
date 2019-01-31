@@ -36,8 +36,6 @@ document.addEventListener('click', function (event) {
   }
 }, false);
 
-
-
 // Make toggle class elements visible and hide slide toggle buttons
 function toggleAllTrue(){
   for (let i = 0; i < targets.length; i++) {
@@ -47,7 +45,6 @@ function toggleAllTrue(){
     buttons[i].style.visibility = 'hidden';
   }
 }
-
 
 // Make toggle class elements hidden and make slide toggle buttons visible
 // with false state text displayed
@@ -60,7 +57,6 @@ function toggleAllFalse(){
     buttons[i].innerHTML = slideFalseText;
   }
 }
-
 
 // Toggle content of current slide and toggle slideTogglerText
 function toggleSlide(t){
@@ -79,7 +75,6 @@ function toggleSlide(t){
     }
   }
 }
-
 
 // Shuffle slides
 function shuffle(container, elements){

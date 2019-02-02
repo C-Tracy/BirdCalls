@@ -14,10 +14,10 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
-    <link rel='stylesheet' href='toggle.css'>
+    <link rel='stylesheet' href='memorize.css'>
 
     <!-- Edit Page Title -->
-    <title>Toggle</title>
+    <title>memorize.js</title>
 
 	</head>
 	<body>
@@ -35,13 +35,12 @@
 
       <div class='slides'>
 
-
 <!-- *********************************************************************** -->
 <!-- Slide Templates -->
 
         <!-- Title Slide -->
         <section>
-          <h1>Toggle</h1>
+          <h1>memorize.js</h1>
         </section>
 
         <!-- Photo and Audio Template -->
@@ -80,21 +79,10 @@
 <!-- End Of Slide Templates -->
 <!-- *********************************************************************** -->
 
-
       </div>
     </div>
-    <script src='toggle.js'></script>
-		<script src="reveal-js/lib/js/head.min.js"></script>
+    <script src='memorize.js'></script>
 		<script src="reveal-js/js/reveal.js"></script>
-		<script>
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'reveal-js/plugin/markdown/marked.js' },
-					{ src: 'reveal-js/plugin/markdown/markdown.js' },
-					{ src: 'reveal-js/plugin/notes/notes.js', async: true },
-					{ src: 'reveal-js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
+		<script>Reveal.initialize();</script>
 	</body>
 </html>

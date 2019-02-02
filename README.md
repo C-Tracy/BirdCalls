@@ -1,7 +1,7 @@
 # Memorize
 A flexible teaching and studying tool built with reveal.js. Learn and study images, sounds, vocabulary, or any combination of the three. Shuffle the order of items to make it more challenging. Use either on or offline.
 
-[View Demo Here](https://kerrycobb.github.io/toggle)
+[View Demo Here](https://kerrycobb.github.io/memorize.js)
 
 # Basic Usage
 1. Fork this repository and clone it or download the ZIP and uncompress it.

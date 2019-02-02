@@ -4,7 +4,7 @@ A flexible teaching and studying tool built with reveal.js. Learn and study imag
 [View Demo Here](https://kerrycobb.github.io/toggle)
 
 # Basic Usage
-1. Fork or clone this repository or download the ZIP and uncompress it.
+1. Fork this repository and clone it or download the ZIP and uncompress it.
 2. Open the index.html file from the toggle directory in a text editor.
 3. Modify the slide templates section by copying and pasting the desired slide templates and deleting any templates that you do not want until you have the number and types of slides that you desire.
 4. Customize the text of each copied and pasted slide template.

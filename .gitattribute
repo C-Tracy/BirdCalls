@@ -1,2 +1,2 @@
-reveal-js/* linguist-vendored
-memorize.css linguist-vendored
+* linguist-vendored
+*.js linguist-vendored=false
